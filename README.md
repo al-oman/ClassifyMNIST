@@ -15,6 +15,7 @@ Current:
 - Normalization
 - ReLU activation functions
 - Softmax at output layer
+
 Planned: 
 - Adam optimizer
 - Minibatching
