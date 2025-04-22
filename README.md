@@ -2,6 +2,7 @@
 
 [![Python](https://img.shields.io/badge/python-3.13-blue.svg)](https://docs.python.org/3/whatsnew/3.13.html)
 [![Numpy](https://img.shields.io/badge/numpy-2.2.2-blue.svg)](https://github.com/numpy/numpy/releases/tag/v2.2.2)
+[![Matplotlib](https://img.shields.io/badge/matplotlib-3.10.0-blue.svg)](https://matplotlib.org/stable/users/release_notes.html)
 [![License](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/license/mit)
 
 A neural network based digit classifier made without the use of ML frameworks such as PyTorch, Tensorflow, etc. This is designed to be used as a test bench for understanding the innerworkings of ML techniques. 
