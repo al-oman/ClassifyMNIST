@@ -133,7 +133,7 @@ class Network:
         #hidden1 to hidden2:    a1*w2+b2-->z2--norm-->z2_hat-->relu-->a2
         #hidden2 to output:     a2*w3+b3-->z3--softmax-->a3-->cost
 
-        #--------------------------------output to hidden2---------------------------------------
+        #-------------------------------output to hidden2--------------------------------------
         dz3_db3 = 1                         #(1,)
         dz3_da2 = self.w3.T                 #(10,80)
         dC_dz3 = self.a3 - y                #(1,10)
@@ -141,7 +141,7 @@ class Network:
         dC_db3 = dz3_db3 * dC_dz3           #(1,10)
         dC_da2 = dC_dz3 @ dz3_da2           #(1,80)
 
-        #--------------------------------hidden2 to hidden1---------------------------------------
+        #-------------------------------hidden2 to hidden1--------------------------------------
         da2_dz2_hat = self.drelu(self.z2_hat)   #(1,80)
         dz2_hat_dz2 = self.norm_backprop(self.z2_hat, self.z2, self.sigma2, self.mu2)  #(80,80)
         dz2_db2 = 1                             #(1,)
@@ -152,7 +152,7 @@ class Network:
         dC_db2 = dz2_db2 * dC_dz2               #(1,80)
         dC_da1 = dC_dz2 @ dz2_da1               #(1,200)
 
-        #--------------------------------hidden1 to input---------------------------------------
+        #-------------------------------hidden1 to input--------------------------------------
         da1_dz1_hat = self.drelu(self.z1_hat)
         dz1_hat_dz1 = self.norm_backprop(self.z1_hat, self.z1, self.sigma1, self.mu1)
         dC_dz1_hat = dC_da1 * da1_dz1_hat       #(1,200)

@@ -8,7 +8,6 @@ def load_X_t(filepath='digits.mat', lower_res=False):
     X,t=data['X'],data['t']
     t=t.astype(int)
 
-
     if lower_res:
         # Downsample the images to lower resolution
         X = X[::2, ::2, :]

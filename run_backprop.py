@@ -106,7 +106,6 @@ def run(filepath):
     losses = np.array(losses)
     print(np.mean(losses))
 
-
 if __name__ == "__main__":
     run('nets/net99.pkl')
     #train(low_res=True, alpha=1e-2, batch_size=1)
