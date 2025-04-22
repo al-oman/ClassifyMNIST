@@ -15,7 +15,7 @@ A neural network based digit classifier made without the use of ML frameworks su
 
 Current:
 - Stochastic gradient descent (SGD)
-- Normalization
+- Layer normalization
 - ReLU activation functions
 - Softmax at output layer
 
@@ -29,6 +29,7 @@ Planned:
 ```bash 
 git clone https://github.com/al-oman/ClassifyMNIST.git
 ```
+2. Start using!
 
 ## Usage
 - uncomment the train() and/or run() functions
@@ -39,6 +40,6 @@ if __name__ == "__main__":
     #run('nets/net99.pkl')
     #train(low_res=True, alpha=1e-2, batch_size=1)
 ```
-### License
+## License
 
 MIT License.
